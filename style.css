@@ -373,71 +373,438 @@ margin-top: 20px;
 /* service page  */
 
 
-.work-jihad{
+/* =========================
+   GLOBAL RESPONSIVE CSS
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.nav-barr {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-lrft {
+  width: 30%;
+}
+
+.nav-right {
+  width: 70%;
+}
+
+.nav-right .navbar {
+  width: 100%;
+}
+
+.nav-right .container-fluid {
+  width: 100%;
+}
+
+.navbar-nav {
+  gap: 10px;
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+
+/* =========================
+   WORK SECTION
+========================= */
+
+.work-jihad {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 50px 5%;
+}
+
+.work-one-child,
+.work-two-child,
+.work-three-child,
+.work-four-child {
+  min-height: 220px;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.work-jihad h2 {
+  font-size: 25px;
+}
+
+.work-jihad p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   CLIENT TITLE
+========================= */
+
+.existin.clints {
+  width: 100%;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.existin.clints h1 {
+  font-size: 40px;
+}
+
+
+/* =========================
+   CLIENT CARDS
+========================= */
+
+.card-work {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px 5% 60px;
+}
+
+.card-son1,
+.card-son2,
+.card-son3 {
+  width: 100%;
+}
+
+.card1,
+.card2,
+.card3 {
+  width: 100% !important;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 22px;
+}
+
+.card-text {
+  line-height: 1.6;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.FAQ-name {
+  width: 100%;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.FAQ-name h1 {
+  font-size: 40px;
+}
+
+.FAQ-question {
+  width: 100%;
+  padding: 20px 10%;
+  margin-bottom: 50px;
+}
+
+.faq-1 {
+  width: 100%;
+}
+
+.accordion {
+  width: 100%;
+}
+
+.accordion-button {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.copy {
+  width: 100%;
+  padding: 25px;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+/* =================================================
+   TABLET RESPONSIVE - 768px TO 991px
+================================================= */
+
+@media (max-width: 991px) {
+
+  /* Navbar */
+  .nav-lrft {
+    width: 10%;
+  }
+
+  .nav-right {
+    width: 90%;
+  }
+
+  .nav-right .navbar {
+    padding: 10px 15px;
+  }
+
+  .navbar-nav {
+    gap: 0;
+  }
+
+
+  /* Work */
+  .work-jihad {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 40px 5%;
+  }
+
+
+  /* Cards */
+  .card-work {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 5% 50px;
+  }
+
+  .card-img-top {
     height: 350px;
-    width: 80%;
-   position: relative;
-   gap: 2.5%;
-   justify-content: center;
-   margin-left: 10%;
-   margin-top: 100px;
-   /* background-color: blueviolet; */
-}
-.work-one-child{
-    height: 45%;
-    width: 45%;
-     background-color: rgb(194, 201, 201);
-    position: absolute;
-    margin-left: 2.5%;
-    margin-top: 2.5%;
-    text-align: center;
+  }
+
+
+  /* FAQ */
+  .FAQ-question {
+    padding: 20px 7%;
+  }
 
 }
-.work-two-child{
-    height: 45%;
-    width: 45%;
-    background-color: rgb(194, 201, 201);
-    position: absolute;
-    margin-top: 2.5%;
-    margin-left: 50%;
-    text-align: center;
-}
-.work-three-child{
-    height: 45%;
-    width: 45%;
-    background-color: rgb(194, 201, 201);
-    position: absolute;
-    margin-top: 190px;
-    margin-left: 2.5%;
-    text-align: center;
-}
-.work-four-child{
-     height: 45%;
-    width: 45%;
-    background-color: rgb(194, 201, 201);
-    position: absolute;
-    margin-top: 190px;
-    margin-left: 50%;
-    text-align: center;
-}
 
-.FAQ-name{
-    height: 60px;
+
+/* =================================================
+   MOBILE RESPONSIVE - BELOW 767px
+================================================= */
+
+@media (max-width: 767px) {
+
+  /* Navbar */
+  .nav-barr {
+    display: block;
+  }
+
+  .nav-lrft {
+    display: none;
+  }
+
+  .nav-right {
     width: 100%;
-    background-color: aliceblue;
-    justify-content: center;
-    text-align: center;
-    margin-top: 350px;
-}
-.FAQ-question{
-    height: 400px;
-    width: 60%;
-    margin-left: 20%;
-    margin-top: 20px;
-    /* background-color: rgb(180, 178, 174); */
+  }
+
+  .nav-right .navbar {
+    width: 100%;
+  }
+
+  .navbar-brand img {
+    height: 45px;
+    width: auto;
+  }
+
+  .navbar-nav {
+    padding-top: 10px;
+  }
+
+  .nav-link {
+    padding: 10px 5px;
+  }
+
+
+  /* Work section */
+  .work-jihad {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px 20px;
+  }
+
+  .work-one-child,
+  .work-two-child,
+  .work-three-child,
+  .work-four-child {
+    min-height: auto;
+    padding: 25px 20px;
+  }
+
+  .work-jihad h2 {
+    font-size: 23px;
+  }
+
+  .work-jihad p {
+    font-size: 15px;
+  }
+
+
+  /* Client heading */
+  .existin.clints {
+    padding: 25px 10px;
+  }
+
+  .existin.clints h1 {
+    font-size: 32px;
+  }
+
+
+  /* Cards */
+  .card-work {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 10px 20px 40px;
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    width: 100% !important;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+
+  /* FAQ */
+  .FAQ-name {
+    padding: 25px 10px;
+  }
+
+  .FAQ-name h1 {
+    font-size: 32px;
+  }
+
+  .FAQ-question {
+    padding: 10px 20px;
+  }
+
+  .accordion-button {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .accordion-body {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+
+  /* Copyright */
+  .copy {
+    font-size: 14px;
+    padding: 20px 10px;
+  }
+
 }
 
 
+/* =================================================
+   SMALL MOBILE - BELOW 480px
+================================================= */
+
+@media (max-width: 480px) {
+
+  .navbar-brand img {
+    height: 40px;
+  }
+
+  .work-jihad {
+    padding: 25px 15px;
+  }
+
+  .work-one-child,
+  .work-two-child,
+  .work-three-child,
+  .work-four-child {
+    padding: 20px 15px;
+  }
+
+  .work-jihad h2 {
+    font-size: 21px;
+  }
+
+  .work-jihad p {
+    font-size: 14px;
+  }
+
+  .existin.clints h1,
+  .FAQ-name h1 {
+    font-size: 28px;
+  }
+
+  .card-work {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .card-img-top {
+    height: 250px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-text {
+    font-size: 14px;
+  }
+
+  .FAQ-question {
+    padding: 10px 15px;
+  }
+
+  .accordion-button {
+    font-size: 15px;
+  }
+
+}
 
 
 /* contract  */
